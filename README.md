@@ -14,12 +14,17 @@ To build and run the project, you need to have CMake installed.
 ### Building
 
 1. Navigate to the project directory.
-2. Run `cmake .` to generate the build files.
-3. Run `make` to build the project.
+2. Create a new directory for the build files and navigate into it:
+```
+mkdir build
+cd build
+```
+3. Run `cmake ..` to generate the build files in the new directory.
+4. Run `cmake --build . --config Release --` to build the project.
 
 ### Running
 
-After building the project, you can run the game with `./TicTacToe`.
+After building the project, you can run the game with `./Release/TicTacToe`.
 
 ## Game Rules
 
