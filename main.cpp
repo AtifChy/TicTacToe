@@ -1,8 +1,15 @@
+#include <csignal>
 #include <iostream>
 #include <windows.h>
 
 bool gameOver;
 char board[3][3];
+
+void signalHandler(int signum) {
+    std::cout << "Interrupt signal (" << signum << ") received.\n";
+    std::cout << "Exiting...\n";
+    exit(signum);
+}
 
 void setup() {
     gameOver = false;
@@ -122,6 +129,8 @@ void logic() {
 }
 
 int main(int, char**) {
+    signal(SIGINT, signalHandler);
+
     setup();
     while (!gameOver) {
         draw();

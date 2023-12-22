@@ -15,7 +15,7 @@ To build and run the project, you need to have CMake installed.
 
 1. Navigate to the project directory.
 2. Create a new directory for the build files and navigate into it:
-```
+```sh
 mkdir build
 cd build
 ```
